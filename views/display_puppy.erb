@@ -1,7 +1,9 @@
-<h3>Submit your puppy</h3>
-<form method="post" action="/display_puppy">
-  <input type="text" name="name">
-  <input type="text" name="breed">
-  <input type="text" name="age">
-  <input type="submit" value="Send request">
-</form>
+<h3>Puppy</h3>
+
+<h5>Puppy Name: <%= @puppy.name %></h5>
+<h5>Puppy Breed: <%= @puppy.breed %></h5>
+<h5>Puppy Age: <%= @puppy.age %>months</h5>
+
+expect(page).to have_text("Puppy Name:\nButch")
+expect(page).to have_text("Puppy Breed:\nMastiff")
+expect(page).to have_text("Puppy Age:\n6 months")
